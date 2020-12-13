@@ -8,7 +8,8 @@ public class NetworkManagerTDF : NetworkManager
 {
     public Transform leftPlayerSpawn;
     public Transform rightPlayerSpawn;
-   
+    GameObject ball;
+
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         // add player at correct spawn position
@@ -17,10 +18,10 @@ public class NetworkManagerTDF : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, player);
 
         // spawn ball if two players
-        if (numPlayers == 2)
+        if (numPlayers == 1)
         {
-            //ball = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Ball"));
-            //NetworkServer.Spawn(ball);
+            ball = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Ball"));
+            NetworkServer.Spawn(ball);
             Debug.Log("StartGame");
         }
     }

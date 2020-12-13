@@ -243,7 +243,8 @@ MonoBehaviour:
   playerPrefab: {fileID: 5098898143031717943, guid: 00b88454f31e1a9439f42dd382f795e9, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 1
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 7271072381631376185, guid: 0fab227bd7b5ef54699eff6398bbb32d, type: 3}
   leftPlayerSpawn: {fileID: 1631296680}
   rightPlayerSpawn: {fileID: 1661229541}
 --- !u!1 &1631296679

@@ -289,9 +289,10 @@ public class PlayerController : NetworkBehaviour
     [ClientRpc]
     public void RpcReturnHands()
     {
-        leftHand.localPosition = Vector3.MoveTowards(new Vector2(0, 0), leftHand.localPosition,  returnSpeed * Time.deltaTime);
+        //leftHand.localPosition = Vector3.MoveTowards(new Vector2(0, 0), leftHand.localPosition,  returnSpeed * Time.deltaTime);
+        leftHand.localPosition = Vector3.MoveTowards(leftHand.localPosition, new Vector2(0, 0), returnSpeed * Time.deltaTime);
         //Debug.Log(returningLeft);
-        
+
     }
 
 
@@ -315,7 +316,8 @@ public class PlayerController : NetworkBehaviour
     [ClientRpc]
     public void RpcReturnRightHand()
     {
-        rightHand.localPosition = Vector3.MoveTowards(new Vector2(0, 0), rightHand.localPosition, returnSpeed * Time.deltaTime);
+        //rightHand.localPosition = Vector3.MoveTowards(new Vector2(0, 0), rightHand.localPosition, returnSpeed * Time.deltaTime);
+        rightHand.localPosition = Vector3.MoveTowards(rightHand.localPosition, new Vector2(0, 0), returnSpeed * Time.deltaTime);
     }
 
     [Command]
